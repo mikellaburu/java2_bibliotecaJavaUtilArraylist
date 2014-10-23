@@ -1,0 +1,13 @@
+import java.util.*;
+public class Arraylist extends Parent implements Interface {
+	ArrayList lista = new ArrayList();
+	lista.add("Mikel");
+	lista.add("Laburu");
+	lista.add(1985);
+	lista.add('M');
+	lista.add(1.71);
+	System.out.println("Lehen arraylist-aren elementuak: ");
+	for (int i=0;i<lista.size();i++){
+		System.out.print(" "+lista.get(i));
+	}
+}
