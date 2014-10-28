@@ -37,21 +37,31 @@ public class Arraylist{
 		}
 
 		int posizioa;
-		do{
-			System.out.println("Sartu arralistaren posizio bat daukan edukia ikusteko (-1 bukatzeko)");
-			posizioa=tecla.nextInt();
-			if (posizioa!=-1){
-				if (posizioa>=listaEnteros.size()){
-					System.out.println("Posizio gutxiago ditu, sartu beste bat");
+
+		if (listaEnteros.size()==0){
+			System.out.println("Arraylist-a hutsa dago.");
+			//System.exit(0);
+		}else{
+
+			do{
+				System.out.println("Sartu arralistaren posizio bat daukan edukia ikusteko (-1 bukatzeko)");
+				posizioa=tecla.nextInt();
+				if (posizioa!=-1){
+					if (posizioa>=listaEnteros.size()){
+						System.out.println("Posizio gutxiago ditu, sartu beste bat");
+					}else{
+						System.out.println(posizioa+". posizioaren edukia: "+listaEnteros.get(posizioa));
+					}
 				}else{
-					System.out.println(listaEnteros.get(posizioa));
+					System.out.println("Atera");
 				}
-			}else{
-				System.out.println("Atera");
-			}
 			
-		}while(posizioa!=-1);
+			}while(posizioa!=-1);
+		
+
+		}
 		System.out.println("Programa bukatua");
+
 
 	}
 	
